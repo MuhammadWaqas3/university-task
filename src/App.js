@@ -8,7 +8,7 @@ return (
 <div>
 
 <Profile name={"Waqas"} title={"Software Engineer"}  age={21} location={"Karachi"} />
-<Product/>
+{/* <Product/> */}
 
 </div>
 );
