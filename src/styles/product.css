@@ -1,0 +1,143 @@
+/* Global Container */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: pink; /* Red or pink background */
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav button {
+    background: white;
+    border: none;
+    margin: 0 5px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav button:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .cart img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  /* Product Card */
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Left Section */
+  .left-section {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .product-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Right Section */
+  .right-section {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .product-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .price {
+    font-size: 2rem;
+    color: #444;
+    margin: 10px 0;
+  }
+  
+  .counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  
+  .counter button {
+    background: white;
+    border: 2px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .counter button:hover {
+    background-color: #f3f3f3;
+  }
+  
+  .counter span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Buy Now Button */
+  .buy-now {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .buy-now:hover {
+    background-color: darkred;
+  }
+  
+  /* Footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    color: yellow;
+    text-align: left;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  

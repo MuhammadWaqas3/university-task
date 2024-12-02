@@ -12,7 +12,7 @@ export default function Profile(props) {
 
       <div className="profile-card">
         <div className="profile-img">
-          <img src={"../../profile.png"} alt="Profile"
+          <img src="/public/assets/profile.png" alt="Profile" width={100}
           />
         </div>
         <h2>{name}</h2>
