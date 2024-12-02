@@ -1,17 +1,16 @@
-import "./App.css";
-import Header from "./components/header.js";
-import Content from "./components/content.js";
-import Footer from "./components/footer/footer.js";
+import React from 'react';
+import './App.css'; // Import global styles
+import Profile from './components/profileCard';
+
 
 function App() {
-  return (
-    <div className="App">
-      <h1>I am Waqas </h1>
-      <Header />
-      <Content />
-      <Footer />
-    </div>
-  );
-}
+return (
+<div>
 
+<Profile name={"Waqas"} title={"Software Engineer"}  age={21} location={"Karachi"} />
+
+
+</div>
+);
+}
 export default App;
