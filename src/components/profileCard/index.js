@@ -1,8 +1,8 @@
 
 
-import "../../styles/profile.css";
+import "../../styles/product.css";
 import React from "react";
-
+import img from "../../../public/assets/img.svg";
 export default function Profile(props) {
 
   const { name, title, age, location } = props;
@@ -12,7 +12,7 @@ export default function Profile(props) {
 
       <div className="profile-card">
         <div className="profile-img">
-          <img src="/public/assets/profile.png" alt="Profile" width={100}
+          <img src={img} alt="Profile" width={100}
           />
         </div>
         <h2>{name}</h2>
