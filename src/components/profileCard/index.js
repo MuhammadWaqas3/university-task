@@ -12,12 +12,12 @@ export default function Profile(props) {
 
       <div className="profile-card">
         <div className="profile-img">
-          <img src="/public/assets/profile.png"
-            alt="Profile"
+          <img src={"../../profile.png"} alt="Profile"
           />
         </div>
         <h2>{name}</h2>
-        <p className="title">{age}</p>    <p className="title">{title}</p>
+        <p className="title">{age}</p>  
+          <p className="title">{title}</p>
         <p>{location}</p>
         <p>Building innovative web solutions.</p>
         <div className="social-links">
