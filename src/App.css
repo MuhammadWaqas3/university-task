@@ -2,6 +2,7 @@ body {
     margin: 0;
   
    font-family: inter !important;
+   background-color: rgb(222, 240, 246);
     }
 
     @font-face {

@@ -8,7 +8,8 @@ function App() {
     <div>
 
       {/* <Profile name={"Waqas"} title={"Software Engineer"}  age={21} location={"Karachi"} /> */}
-      <Product/>
+      <Product id={12345} name={"iphone 16 pro"} price={"$899.00"}  url={"./product-image.svg"} />
+
     </div>
   );
 }
