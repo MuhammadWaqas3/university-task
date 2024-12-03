@@ -16,3 +16,22 @@ body {
 
         padding: 20px;
     }
+
+
+    .link-to-profile, .link-to-product {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      
+      .link-to-profile a, .link-to-product a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 18px;
+      }
+      
+      .link-to-profile a:hover, .link-to-product a:hover {
+        text-decoration: underline;
+      }
+      
