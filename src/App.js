@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css"; // Import global styles
-import Profile from "./components/profileCard";
+// import Profile from "./components/profileCard";
 import Product from "./components/productCard";
 
 function App() {
