@@ -1,5 +1,15 @@
 body {
   margin: 0;
- 
+ background-color: #1D2029 !important;
+ font-family: inter !important;
 }
 
+@font-face {
+  font-family: inter;
+  src: url("../public/Inter/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: inter-bold;
+  src: url("../public/Inter/static/Inter-Bold.ttf");
+}

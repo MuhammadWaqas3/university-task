@@ -11,7 +11,7 @@ function App() {
         name: "John Doe",
         email: "johndoe@example.com",
         role: "Administrator",
-        profilePicture: "./img.svg",
+        profilePicture: "./profile.png",
       };
     
       const statisticsData = {
@@ -28,13 +28,17 @@ function App() {
       ];
     
       return (
+        <>
+   
         <div className="app-container">
+        <h1 className="title">Dashboard</h1>
           <div className="grid-layout">
            <Info user={userData} />
         <Statistics stats={statisticsData} />
             <Messages messages={messagesData} /> 
           </div>
         </div>
+        </>
       );
     }
     
