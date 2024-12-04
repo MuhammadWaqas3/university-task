@@ -1,113 +1,42 @@
-// //
-
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-// import "./App.css";
-// import Product from "./components/productCard/product";
-// import Profile from "./components/profileCard/profile";
-
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//         {/* Define Routes */}
-//         <Routes>
-//           <Route
-//             path="./product.js"
-//             element={
-//               <div>
-//                 <Product
-//                   id={12345}
-//                   name="iPhone 16 Pro"
-//                   price="$899.00"
-//                   url="./product-image.svg"
-//                 />
-//                 {/* Add Link to Profile */}
-//                 <div className="link-to-profile">
-//                   <Link to="./profile.js">Click to watch my profile →</Link>
-//                 </div>
-//               </div>
-//             }
-//           />
-//           <Route
-//             path="/profile"
-//             element={
-//               <div>
-//                 <Profile
-//                   name="Waqas"
-//                   title="Software Engineer"
-//                   age={21}
-//                   location="Karachi"
-//                 />
-//                 {/* Add Link to Product */}
-//                 <div className="link-to-product">
-//                   <Link to="/">Click to watch my product →</Link>
-//                 </div>
-//               </div>
-//             }
-//           />
-//         </Routes>
-//       </div>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
-
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import Product from "./components/productCard/product";
-import Profile from "./components/profileCard/profile";
+import Messages from  "./components/messages/messages";
+import Statistics from "./components/statistics/stats";
+import Info from "./components/userInfo/info";
 
 function App() {
-  return (
-    <Router>
-      <div className="App">
-        {/* Define Routes */}
-        <Routes>
-         
-          <Route
-            path="/profile"
-            element={
-              <div>
-                <Profile
-                  name="Waqas"
-                  title="Software Engineer"
-                  age={21}
-                  location="Karachi"
-                />
-                {/* Add Link to Product */}
-                <div className="link-to-product">
-                  <Link to="/">Click to watch my product →</Link>
-                </div>
-              </div>
-            }
 
-        
-          />
- <Route
-            path="/"
-            element={
-              <div>
-                <Product
-                  id={12345}
-                  name="iPhone 16 Pro"
-                  price="$899.00"
-                  url="./product-image.svg"
-                />
-                {/* Add Link to Profile */}
-                <div className="link-to-profile">
-                  <Link to="/profile">Click to watch my profile →</Link>
-                </div>
-              </div>
-            }
-          />        </Routes>
-      </div>
-    </Router>
-  );
-}
-
+ const userData = {
+        name: "John Doe",
+        email: "johndoe@example.com",
+        role: "Administrator",
+        profilePicture: "./img.svg",
+      };
+    
+      const statisticsData = {
+        totalUsers: 500,
+        activeUsers: 120,
+        newSignups: 50,
+        activePercentage: (120 / 500) * 100,
+      };
+    
+      const messagesData = [
+        "Welcome to the platform!",
+        "System maintenance scheduled for tomorrow.",
+        "New features have been added!",
+      ];
+    
+      return (
+        <div className="app-container">
+          <div className="grid-layout">
+           <Info user={userData} />
+        <Statistics stats={statisticsData} />
+            <Messages messages={messagesData} /> 
+          </div>
+        </div>
+      );
+    }
+    
+ 
 export default App;
