@@ -1,46 +1,42 @@
+
+
+
+
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Navbar from "./components/navbar";
+import LandingPage from "./components/landingPage";
+import SpecialityMenu from "./components/specialityMenu";
 import "./App.css";
-import Messages from  "./components/messages/messages";
-import Statistics from "./components/statistics/stats";
-import Info from "./components/userInfo/info";
+import Footer from "./components/footer";
 
 function App() {
+  return (
+    <div className="App">
+      <Navbar />
+      <LandingPage />
+      <SpecialityMenu
+  item1={{
+    name: "Spicy Chicken Wings",
+    description: "Our signature spicy wings",
+    price: "Rs. 500",
+    image: "https://images.deliveryhero.io/image/fd-pk/Products/49411247.jpg?width=%s",
+  }}
+  item2={{
+    name: "Classic Fried Chicken",
+    description: "Traditional recipe",
+    price: "Rs. 350",
+    image: "https://images.deliveryhero.io/image/fd-pk/Products/26754778.jpg?width=%s",
+  }}
+  item3={{
+    name: "Chicken Burger Combo",
+    description: "Burger with fries and drink",
+    price: "Rs. 650",
+    image: "https://images.deliveryhero.io/image/fd-pk/Products/58219340.jpg?width=%s",
+  }}
+/>
+<Footer/>
+    </div>
+  );
+}
 
- const userData = {
-        name: "John Doe",
-        email: "johndoe@example.com",
-        role: "Administrator",
-        profilePicture: "./profile.png",
-      };
-    
-      const statisticsData = {
-        totalUsers: 500,
-        activeUsers: 120,
-        newSignups: 50,
-        activePercentage: (120 / 500) * 100,
-      };
-    
-      const messagesData = [
-        "Welcome to the platform!",
-        "System maintenance scheduled for tomorrow.",
-        "New features have been added!",
-      ];
-    
-      return (
-        <>
-   
-        <div className="app-container">
-        <h1 className="title">Dashboard</h1>
-          <div className="grid-layout">
-           <Info user={userData} />
-        <Statistics stats={statisticsData} />
-            <Messages messages={messagesData} /> 
-          </div>
-        </div>
-        </>
-      );
-    }
-    
- 
 export default App;
