@@ -18,7 +18,7 @@ function App() {
           <Route path="/shoppingCart" element={<Shopping />} />
           <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<ProductDetail />} />
-          <Route path="/user/:username" element={<UserProfile />} /> {/* Dynamic Route */}
+          <Route path="/user/:username" element={<UserProfile />} /> 
         </Routes>
       </Router>
     </div>

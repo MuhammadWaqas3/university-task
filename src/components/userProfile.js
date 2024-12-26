@@ -11,19 +11,19 @@ export default function UserProfile() {
       name: "John Doe",
       email: "john@example.com",
       bio: "Loves hiking and outdoor adventures.",
-      avatar: "https://via.placeholder.com/100?text=JD",
+      avatar: "/profile.png",
     },
     jane_smith: {
       name: "Jane Smith",
       email: "jane@example.com",
       bio: "Avid reader and coffee enthusiast.",
-      avatar: "https://via.placeholder.com/100?text=JS",
+      avatar: "/profile.png",
     },
     sam_lee: {
       name: "Sam Lee",
       email: "sam@example.com",
       bio: "Tech geek and music lover.",
-      avatar: "https://via.placeholder.com/100?text=SL",
+      avatar: "/profile.png",
     },
   };
 

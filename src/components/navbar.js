@@ -13,9 +13,7 @@ export default function Navbar () {
 <Link to ="/"><img src="https://wemakeshoes.com/wp-content/webp-express/webp-images/uploads/2023/02/candt-logo-001.png.webp" alt="logo" width={150}/></Link>
 
         <ul className="ul">
-          {/* <li>
-            <Link to="/home" className="link" >Home</Link>
-          </li> */}
+          
           <li>
             <Link to="/shoppingCart" className="link">Shopping</Link>
           </li>
@@ -24,7 +22,7 @@ export default function Navbar () {
           </li>
           
           <li>
-          <Link to="/user/john_doe" className="link">User Profile</Link>
+          <Link to="/user/sam_lee" className="link">User Profile</Link>
           </li>
         </ul>
 
