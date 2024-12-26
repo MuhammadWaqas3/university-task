@@ -1,59 +1,106 @@
+
+
+
+
+
+
 import React, { useState } from "react";
+import "../styles/shoppingCart.css";
 
-const ShoppingCart = () => {
-  const [item1Count, setItem1Count] = useState(0);
-  const [item2Count, setItem2Count] = useState(0);
-  const [item3Count, setItem3Count] = useState(0);
-  const [total, setTotal] = useState(0);
+export default function ShoppingCart() {
+  // State for hardcoded items
+  const [item1Quantity, setItem1Quantity] = useState(0);
+  const [item2Quantity, setItem2Quantity] = useState(0);
+  const [item3Quantity, setItem3Quantity] = useState(0);
 
-  const addItem = (price, setCount, count) => {
-    setCount(count + 1);
-    setTotal(total + price);
-  };
+  const [showItem1, setShowItem1] = useState(true);
+  const [showItem2, setShowItem2] = useState(true);
+  const [showItem3, setShowItem3] = useState(true);
 
-  const removeItem = (price, setCount, count) => {
-    if (count > 0) {
-      setCount(count - 1);
-      setTotal(total - price);
-    }
-  };
+  // Total calculation
+  const total =
+    (showItem1 ? 10 * item1Quantity : 0) +
+    (showItem2 ? 15 * item2Quantity : 0) +
+    (showItem3 ? 20 * item3Quantity : 0);
 
   return (
-    <div>
-      <h2>Shopping Cart</h2>
-      <div>
-        <h3>Item 1 ($10)</h3>
-        <button onClick={() => addItem(10, setItem1Count, item1Count)}>
-          Add
-        </button>
-        <button onClick={() => removeItem(10, setItem1Count, item1Count)}>
-          Remove
-        </button>
-        <p>Quantity: {item1Count}</p>
+    <div className="shopping-cart">
+      <h1>Shopping Cart</h1>
+
+      <div className="cart-items">
+        {showItem1 && (
+          <div className="cart-item">
+            <div className="item-details">
+              <h3>Item 1</h3>
+              <p>$10.00</p>
+            </div>
+            <div className="item-actions">
+              <button
+                onClick={() => setItem1Quantity((prev) => Math.max(0, prev - 1))}
+              >
+                -
+              </button>
+              <span>{item1Quantity}</span>
+              <button onClick={() => setItem1Quantity((prev) => prev + 1)}>
+                +
+              </button>
+            </div>
+            <button className="remove-btn" onClick={() => setShowItem1(false)}>
+              Remove
+            </button>
+          </div>
+        )}
+
+        {showItem2 && (
+          <div className="cart-item">
+            <div className="item-details">
+              <h3>Item 2</h3>
+              <p>$15.00</p>
+            </div>
+            <div className="item-actions">
+              <button
+                onClick={() => setItem2Quantity((prev) => Math.max(0, prev - 1))}
+              >
+                -
+              </button>
+              <span>{item2Quantity}</span>
+              <button onClick={() => setItem2Quantity((prev) => prev + 1)}>
+                +
+              </button>
+            </div>
+            <button className="remove-btn" onClick={() => setShowItem2(false)}>
+              Remove
+            </button>
+          </div>
+        )}
+
+        {showItem3 && (
+          <div className="cart-item">
+            <div className="item-details">
+              <h3>Item 3</h3>
+              <p>$20.00</p>
+            </div>
+            <div className="item-actions">
+              <button
+                onClick={() => setItem3Quantity((prev) => Math.max(0, prev - 1))}
+              >
+                -
+              </button>
+              <span>{item3Quantity}</span>
+              <button onClick={() => setItem3Quantity((prev) => prev + 1)}>
+                +
+              </button>
+            </div>
+            <button className="remove-btn" onClick={() => setShowItem3(false)}>
+              Remove
+            </button>
+          </div>
+        )}
       </div>
-      <div>
-        <h3>Item 2 ($20)</h3>
-        <button onClick={() => addItem(20, setItem2Count, item2Count)}>
-          Add
-        </button>
-        <button onClick={() => removeItem(20, setItem2Count, item2Count)}>
-          Remove
-        </button>
-        <p>Quantity: {item2Count}</p>
+
+      <div className="total">
+        <h3>Total: ${total.toFixed(0)}</h3>
       </div>
-      <div>
-        <h3>Item 3 ($30)</h3>
-        <button onClick={() => addItem(30, setItem3Count, item3Count)}>
-          Add
-        </button>
-        <button onClick={() => removeItem(30, setItem3Count, item3Count)}>
-          Remove
-        </button>
-        <p>Quantity: {item3Count}</p>
-      </div>
-      <h3>Total Cost: ${total}</h3>
     </div>
   );
-};
-
-export default ShoppingCart;
+}
