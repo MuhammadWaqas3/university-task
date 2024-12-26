@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import "../styles/shoppingCart.css";
 
 export default function ShoppingCart() {
-  // State for hardcoded items
+
   const [item1Quantity, setItem1Quantity] = useState(0);
   const [item2Quantity, setItem2Quantity] = useState(0);
   const [item3Quantity, setItem3Quantity] = useState(0);
@@ -17,7 +17,7 @@ export default function ShoppingCart() {
   const [showItem2, setShowItem2] = useState(true);
   const [showItem3, setShowItem3] = useState(true);
 
-  // Total calculation
+
   const total =
     (showItem1 ? 10 * item1Quantity : 0) +
     (showItem2 ? 15 * item2Quantity : 0) +
@@ -31,7 +31,9 @@ export default function ShoppingCart() {
         {showItem1 && (
           <div className="cart-item">
             <div className="item-details">
-              <h3>Item 1</h3>
+             
+ <img src="/sh1.jpeg" width={200} height={200} alt="shoe" className="shoe"/>
+
               <p>$10.00</p>
             </div>
             <div className="item-actions">
@@ -54,7 +56,7 @@ export default function ShoppingCart() {
         {showItem2 && (
           <div className="cart-item">
             <div className="item-details">
-              <h3>Item 2</h3>
+            <img src="/sh2.jpg"  width={200} height={200} alt="shoe" className="shoe" />
               <p>$15.00</p>
             </div>
             <div className="item-actions">
@@ -77,7 +79,7 @@ export default function ShoppingCart() {
         {showItem3 && (
           <div className="cart-item">
             <div className="item-details">
-              <h3>Item 3</h3>
+            <img src="/sh3.jpg"  width={200} height={200} alt="shoe" className="shoe" />
               <p>$20.00</p>
             </div>
             <div className="item-actions">

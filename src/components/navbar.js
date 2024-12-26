@@ -10,7 +10,7 @@ export default function Navbar () {
         <nav className="navbar">
 
 
-<Link to ="/"><img src="https://cdn.prod.website-files.com/633312e75f7f593dc82257d0/6347d9e9743ad2d131338391_WMW%20Logo.svg" alt="logo" width={150}/></Link>
+<Link to ="/"><img src="https://wemakeshoes.com/wp-content/webp-express/webp-images/uploads/2023/02/candt-logo-001.png.webp" alt="logo" width={150}/></Link>
 
         <ul className="ul">
           {/* <li>
@@ -22,8 +22,9 @@ export default function Navbar () {
           <li>
             <Link to="/product" className="link" >Product</Link>
           </li>
+          
           <li>
-            <Link to="/userProfile" className="link" >UserProfile</Link>
+          <Link to="/user/john_doe" className="link">User Profile</Link>
           </li>
         </ul>
 

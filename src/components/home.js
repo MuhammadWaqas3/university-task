@@ -12,8 +12,8 @@ export default function Home() {
           className="hero-img"
         />
         <div className="hero-text">
-            <h4>Shopify Partners since 2011.</h4>
-          <h1>The Shopify agency for international brands.</h1>
+            <h4>Nike Partners since 2011.</h4>
+          <h1>C&T Sustainable Shoe Manufacturer ltd & co.</h1>
         
         </div>
       </Container>
