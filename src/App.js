@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import './App.css'; // Import global styles
-import Profile from './components/profileCard';
 
 
-function App() {
-return (
-<div>
-
-<Profile name={"Waqas"} title={"Software Engineer"}  age={21} location={"Karachi"} />
-
-
-</div>
-);
-}
-export default App;
-=======
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -44,4 +28,4 @@ function App() {
 }
 
 export default App;
->>>>>>> lab-10
+

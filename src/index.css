@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+
+ font-family: inter !important;
+}
+
+@font-face {
+  font-family: inter;
+  src: url("../public/Inter/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: inter-bold;
+  src: url("../public/Inter/static/Inter-Bold.ttf");
+}
+
